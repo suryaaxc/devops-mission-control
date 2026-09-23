@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "xterm/css/xterm.css";
+
+@layer utilities {
+  .glow-green {
+    box-shadow: 0 0 10px 2px rgba(34, 197, 94, 0.4);
+  }
+  .glow-red {
+    box-shadow: 0 0 10px 2px rgba(239, 68, 68, 0.4);
+  }
+  .glow-yellow {
+    box-shadow: 0 0 10px 2px rgba(234, 179, 8, 0.4);
+  }
+  .glow-blue {
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.4);
+  }
+}
+
+.react-flow__node {
+  border-radius: 8px;
+}
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border: 2px solid #0a0a0a;
+}
+.react-flow__edge-path {
+  stroke: #525252;
+  stroke-width: 2;
+}
+.react-flow__edge.animated .react-flow__edge-path {
+  stroke: #3b82f6;
+  stroke-dasharray: 5;
+  animation: dashdraw 1s linear infinite;
+}
+
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+}
